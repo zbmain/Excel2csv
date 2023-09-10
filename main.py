@@ -55,7 +55,6 @@ def list_files_and_directories(directory, s, e):
     with os.scandir(directory) as entries:
         for entry in entries:
             if entry.is_file():
-                print(f"文件: {directory} / {entry.name}")
                 file_conversion(os.path.join(directory, entry.name), s, e)
             elif entry.is_dir():
                 print(f"目录: {directory} / {entry.name}")
